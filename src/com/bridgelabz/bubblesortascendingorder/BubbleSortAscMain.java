@@ -1,4 +1,4 @@
-package com.bridgelabz.bubblesort;
+package com.bridgelabz.bubblesortascendingorder;
 
 import java.util.Scanner;
 
