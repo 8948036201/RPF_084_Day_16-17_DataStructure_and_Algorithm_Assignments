@@ -1,7 +1,7 @@
 package com.bridgelabz.fifthquestion_mergesortstring;
 
-public class MergeSort {
-
+public class MergeSortString {
+	
 	public String[] mergeSort(String[] array) {
 		if (array.length == 1) {
 			System.out.println("It is already sorted: ");
@@ -39,5 +39,4 @@ public class MergeSort {
 		}
 		return returnArray;
 	}
-
 }

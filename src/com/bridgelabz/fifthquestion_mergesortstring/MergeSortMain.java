@@ -17,7 +17,7 @@ public class MergeSortMain {
 		}
 		scanner.close();
 
-		MergeSort mergeSort = new MergeSort();
+		MergeSortString mergeSort = new MergeSortString();
 		strings = mergeSort.mergeSort(strings);
 
 		System.out.println("Sorted list:");
