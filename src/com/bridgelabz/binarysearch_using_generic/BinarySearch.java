@@ -28,6 +28,9 @@ public class BinarySearch<T> {
 	
 	public static int getInteger() {
 		return scanner.nextInt();
-
+	}
+	
+	public static String getString() {
+		return scanner.next();
 	}
 }
