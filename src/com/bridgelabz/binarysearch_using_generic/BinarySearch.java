@@ -2,7 +2,7 @@ package com.bridgelabz.binarysearch_using_generic;
 
 import java.util.Scanner;
 
-public class BinarySearch {
+public class BinarySearch<T> {
 	static Scanner scanner = new Scanner(System.in);
 	public static <T extends Comparable<T>> int binarySearch(T[] array, T key, int left, int right) {
 
