@@ -9,12 +9,12 @@ public class AnagramMain {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter string1 and string2 to check for anagram: ");
 		
-		String string1 = scanner.next();	
-		String string2 = scanner.next(); 
+		String str1 = scanner.next();	
+		String str2 = scanner.next(); 
 		
 		Anagram anagramObj = new Anagram();
 		
-		if(anagramObj.anagram(string1, string2)) {
+		if(anagramObj.anagram(str1, str2)) {
 			System.out.println("Strings are anagram.");
 		}
 		else {
