@@ -1,49 +1,28 @@
 package com.bridgelabz.primenumber_anagram_and_palindrome;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Scanner;
-
 public class PrimeAnagramMain {
 	
-	static PrimeAnagram primeAnagram = new PrimeAnagram();
+	static PrimeAnagramPalindrome primeAnagramPalindrome = new PrimeAnagramPalindrome();
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter the lower limit :");
-		int lowerLimit = scanner.nextInt();
-		System.out.println("Enter the upper limit :");
-		int upperLimit = scanner.nextInt();
-
-		//PrimeAnagram primeAnagram = new PrimeAnagram();
-		String primeNumber = primeAnagram.prime(lowerLimit, upperLimit);
-		System.out.println("" + primeNumber);
-
-		String[] anagram = primeNumber.split(" ");
-		System.out.println(primeNumber);
-
-		int[] numbers = new int[anagram.length];
-		for (int i = 0; i < anagram.length; i++)
-			numbers[i] = Integer.parseInt(anagram[i]);
-		LinkedHashSet<String> linkedHash = new LinkedHashSet<String>();
-		System.out.println("The Anagram numbers are:");
-		for (int i = 0; i < anagram.length; i++) {
-			for (int j = i + 1; j < anagram.length; j++) {
-				if (PrimeAnagram.anagramDetection(anagram[i], anagram[j])) {
-					linkedHash.add(anagram[i]);
-					linkedHash.add(anagram[j]);
+		PrimeAnagramPalindrome primeAnagramPalindrome = new PrimeAnagramPalindrome();	//	utility object
+		String[] primeNumbers = primeAnagramPalindrome.prime(1000);
+		
+		System.out.println("Anagram and prime numbers are:");
+		for(int i = 0; i < primeNumbers.length; i++) {
+			for(int j = i + 1; j < primeNumbers.length; j++) {
+				if(primeAnagramPalindrome.anagram(primeNumbers[i], primeNumbers[j])) {
+					System.out.println(primeNumbers[i] + " " + primeNumbers[j]);
 				}
 			}
 		}
-		System.out.println(linkedHash);
-		System.out.println("Palindrome Numbers are:");
-		String[] anagramNumber = new String[linkedHash.size()];
 
-		linkedHash.toArray(anagramNumber);
-		PrimeAnagram.palindromeNumber(anagramNumber);
-		scanner.close();
-
+		System.out.println("\nPalindrome and prime numbers are:");
+		for(int i = 0; i < primeNumbers.length; i++) {
+			if(primeAnagramPalindrome.palindrome(primeNumbers[i])) {
+				System.out.println(primeNumbers[i]);
+			}
+		}
 	}
 }
