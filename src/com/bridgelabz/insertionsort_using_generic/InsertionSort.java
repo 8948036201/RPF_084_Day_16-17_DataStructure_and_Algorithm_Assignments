@@ -2,7 +2,7 @@ package com.bridgelabz.insertionsort_using_generic;
 
 import java.util.Scanner;
 
-public class InsertionSort {
+public class InsertionSort<T> {
 
 	static Scanner scanner = new Scanner(System.in);
 
